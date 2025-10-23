@@ -1,16 +1,4 @@
-import subprocess
-
-def run_script(commands):
-    """Run the database binary and capture its output as a list of lines."""
-    process = subprocess.Popen(
-        ['./main.exe'],  # or './db' on Linux/Mac
-        stdin=subprocess.PIPE,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True
-    )
-    stdout, stderr = process.communicate('\n'.join(commands) + '\n')
-    return [line.strip() for line in stdout.strip().split('\n') if line.strip()]
+from utils import run_script
 
 
 def test_table_full_error():
