@@ -18,10 +18,10 @@ def test_prints_structure_of_one_node_btree():
         "db > Executed.",
         "db > Executed.",
         "db > Tree:",
-        "leaf (size 3)",
-        "- 0 : 1",
-        "- 1 : 2",
-        "- 2 : 3",
+        "- leaf (size 3)",
+        "- 1",
+        "- 2",
+        "- 3",
         "db >",
     ]
 

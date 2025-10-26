@@ -8,5 +8,13 @@ def test_table_full_error():
 
     result = run_script(script)
 
-    # The second-to-last line should contain the table full error
-    assert result[-2] == "db > Error: Table full."
+    # Previously: "db > Error: Table full."
+    # Now expect the last 2 lines to be:
+    # "db > Executed." and "db > Need to implement updating parent after split"
+
+    expected = [
+        "db > Executed.",
+        "db > Need to implement updating parent after split",
+    ]
+
+    assert result[-2:] == expected
