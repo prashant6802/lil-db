@@ -10,7 +10,8 @@ def run_script(commands):
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
-        text=True
+        text=True,
+        bufsize=0
     )
 
     # Join commands into one string separated by newlines
