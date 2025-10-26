@@ -14,7 +14,7 @@ def test_table_full_error():
 
     expected = [
         "db > Executed.",
-        "db > Need to implement updating parent after split",
+        "db > Need to implement splitting internal node",
     ]
 
     assert result[-2:] == expected
