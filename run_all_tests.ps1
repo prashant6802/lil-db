@@ -24,7 +24,7 @@ foreach ($file in $TestFiles) {
 
     # Run pytest on the current test file
     Write-Host "Running pytest on $($file.FullName)..."
-    pytest $file.FullName -v
+    pytest $file.FullName -v -vv
     $ExitCode = $LASTEXITCODE
 
     if ($ExitCode -eq 0) {
