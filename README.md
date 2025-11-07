@@ -16,3 +16,5 @@ add more meta commands as well
 add structure to the code
 
 use sqlglot's parser
+
+Implement Whitesource / Mend check on repository and code changes
